@@ -41,6 +41,41 @@ Consiste em realizar uma série de tratamentos nos dados, para garantir que os d
 
 ```bash
 
+import os
+import shutil
+
+pasta_principal = r'C:\Users\luis.silva\Desktop\uploads\contratos'
+
+pasta_destino = r'C:\Users\luis.silva\Desktop\contratos'
+
+
+def mover_arquivos(pasta_principal, pasta_destino):
+    for root, dirs, files in os.walk(pasta_principal):
+        for file in files:
+            caminho_origem = os.path.join(root, file)
+            caminho_destino = os.path.join(pasta_destino, file)
+
+            # Se o arquivo já existir na pasta de destino, adicionar um número para evitar sobrescrever
+            if os.path.exists(caminho_destino):
+                base, ext = os.path.splitext(file)
+                i = 1
+                while os.path.exists(caminho_destino):
+                    caminho_destino = os.path.join(pasta_destino, f"{base}{i}{ext}")
+                    i += 1
+
+            shutil.move(caminho_origem, caminho_destino)
+            print(f"Movido: {file}")
+
+
+#Chama a função para mover os arquivos,
+mover_arquivos(pasta_principal, pasta_destino)
+
+print("Todos os arquivos foram movidos!")
+
+```
+
+```bash
+
     # Abre o arquivo json no modo leitura
     with open(file_path, "r", encoding="utf-8") as f:
 
