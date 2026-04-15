@@ -1,25 +1,8 @@
 <div align="center">
-  <h1>Teste Técnico Estágio Instar</h1>
+  <h1>Web Scraping com python</h1>
 </div>
 
 </br>
-
-<p align="center">
-  Este repositório contém três partes do teste técnico:
-</p>
-
-</br>
-
-- **Raciocínio Lógico em Python:**  Tratamento e formatação de dados JSON.  
-- **Consultas em Banco de Dados SQL:**  Queries para clientes e pedidos.  
-- **Extração de Dados com Scrapy:**  Spider que coleta informações do site Books.toScrape.  
-
----
-## Sites
-
-- https://sandbox.oxylabs.io/products.
-- https://www.scrapethissite.com/pages/.
-- https://quotes.toscrape.com/.
 
 ## Raciocínio Lógico em Python
 
